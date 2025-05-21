@@ -19,7 +19,7 @@ public class EventService(IEventRepository eventRepository, IEventAddressReposit
         if (existingEvent.Succeeded)
             return new ServiceResponse { Succeeded = false, Error = "Event already exists" };
 
-        // Get or create event address
+        // Get or create an event address
         var eventAddressResult = await _eventAddressRepository.GetOneAsync(e => e.Arena == request.Arena);
         EventAddressEntity eventAddressEntity;
 

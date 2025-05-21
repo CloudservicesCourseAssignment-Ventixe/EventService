@@ -11,6 +11,8 @@ public class EventsController(IEventservice eventService) : ControllerBase
 {
     private readonly IEventservice _eventService = eventService;
 
+  
+
     [HttpGet]
     public async Task<IActionResult> GetAllEvents()
     {
